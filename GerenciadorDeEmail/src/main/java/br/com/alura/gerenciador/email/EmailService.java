@@ -1,17 +1,15 @@
-package br.com.alura.enviadorEmail.enviadorEmail;
+package br.com.alura.gerenciador.email;
 
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
-import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-@Service
 public class EmailService {
 	
-	private static final String EMAIL_LISTA_VIP = System.getenv("EMAIL_LISTA_VIP");
-	private static final String SENHA_EMAIL_LISTA_VIP = System.getenv("SENHA_EMAIL_LISTA_VIP");
+	public static final String EMAIL_LISTA_VIP = System.getenv("EMAIL_LISTA_VIP");
+	public static final String SENHA_EMAIL_LISTA_VIP = System.getenv("SENHA_EMAIL_LISTA_VIP");
 	
 	/**
 	 * É necessário configurar as variáveis do sistema. 

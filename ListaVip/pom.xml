@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.alura.listavip</groupId>
-    <artifactId>listavip</artifactId>
+    <artifactId>ListaVip</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
@@ -50,11 +50,28 @@
             <version>1.3.6.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>br.com.alura.enviadorEmail</groupId>
-            <artifactId>enviadorEmail</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>br.com.alura</groupId>
+            <artifactId>GerenciadorDeEmail</artifactId>
+            <version>1.0-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
     </dependencies>
-
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.3.6.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <name>ListaVip</name>
 </project>
